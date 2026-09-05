@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { PenLine, Plus, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { AppChrome } from "@/components/studio/app-chrome";
