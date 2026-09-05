@@ -115,7 +115,7 @@ function WorkspaceContent({ data, locale }: { data: StudioData; locale: LocaleMo
             <button className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/70 px-4 py-2 text-sm font-semibold text-secondary" data-el="add-record-button">
               <Plus className="size-4" /> {t("workspace.addRecord")}
             </button>
-            <button onClick={() => setIsGenerated(true)} className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-accent shadow-[var(--shadow-md)]" data-el="generate-card-button">
+            <button onClick={() => void handleGenerate()} className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-accent shadow-[var(--shadow-md)]" data-el="generate-card-button">
               <Sparkles className="size-4" /> {isGenerated ? t("workspace.generated") : t("workspace.generate")}
             </button>
           </div>
