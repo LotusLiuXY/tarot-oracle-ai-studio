@@ -1,3 +1,5 @@
+export type LocaleMode = "zh-CN" | "en-US";
+
 export type TimelineEntry = {
   id: string;
   day: string;
