@@ -29,7 +29,7 @@ export function LanguageSwitcher() {
     [i18n],
   );
 
-  const preference = useSyncExternalStore(
+  useSyncExternalStore(
     subscribePreference,
     getLocalePreference,
     () => "system" as LocalePreference,
