@@ -1,0 +1,8 @@
+{
+  "route": "cards",
+  "name": "牌卡",
+  "nav_type": "tab",
+  "order_index": 2,
+  "icon": "gallery-vertical",
+  "summary": "查看已生成的塔罗/神谕卡草案列表"
+}

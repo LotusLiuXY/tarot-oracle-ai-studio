@@ -1,0 +1,8 @@
+{
+  "route": "",
+  "name": "工作台",
+  "nav_type": "tab",
+  "order_index": 0,
+  "icon": "sparkles",
+  "summary": "记录输入、时间线选择、AI 生成与卡牌字段编辑的主工作台"
+}

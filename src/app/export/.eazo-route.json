@@ -1,0 +1,8 @@
+{
+  "route": "export",
+  "name": "导出",
+  "nav_type": "tab",
+  "order_index": 3,
+  "icon": "code",
+  "summary": "预览和复制结构化 HTML 模板"
+}

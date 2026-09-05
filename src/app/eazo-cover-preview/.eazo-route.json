@@ -1,0 +1,8 @@
+{
+  "route": "eazo-cover-preview",
+  "name": "封面预览",
+  "nav_type": "stack",
+  "order_index": 4,
+  "icon": "image",
+  "summary": "展示记录转化为牌卡模板的循环预览"
+}
