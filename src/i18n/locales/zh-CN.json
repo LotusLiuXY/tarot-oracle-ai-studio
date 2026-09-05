@@ -47,6 +47,13 @@
     "readyStatus": "等待生成草案",
     "statusLabel": "当前状态",
     "statusHint": "添加记录后可生成，生成后牌卡字段会自动拆分。",
+    "dailyInput": "日常录入",
+    "dailyInputHint": "把梦、日记、咨询片段快速收进时间线。",
+    "inputModes": {
+      "text": { "title": "文字速记", "hint": "直接写下梦境和情绪" },
+      "voice": { "title": "语音记录", "hint": "适合醒来后口述片段" },
+      "image": { "title": "图片线索", "hint": "上传绘画、照片或符号" }
+    },
     "timeline": "时间线",
     "visibleTimeline": "首屏显示 4 个节点，可横向滚动查看更多记录。",
     "source": "来源记录",
@@ -91,6 +98,18 @@
     "title": "用项目保存长期叙事材料",
     "intro": "每个项目都可以沉淀记录、符号、时间线与生成过的牌卡，适合咨询师或插画师长期追踪。",
     "create": "新建项目",
+    "createLabel": "快速新建",
+    "createTitle": "三步建立项目档案",
+    "quick": {
+      "client": "客户 / 主题",
+      "theme": "牌组方向",
+      "firstRecord": "第一条记录"
+    },
+    "form": {
+      "client": "客户名称或匿名代号",
+      "theme": "牌组主题：梦境、关系、疗愈…",
+      "rhythm": "记录节奏：每日 / 每周 / 咨询后"
+    },
     "records": "记录",
     "cards": "牌卡",
     "privacy": "隐私状态",

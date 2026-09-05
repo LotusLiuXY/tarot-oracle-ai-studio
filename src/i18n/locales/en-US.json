@@ -47,6 +47,13 @@
     "readyStatus": "Ready to generate",
     "statusLabel": "Current status",
     "statusHint": "Add a record, then generate a draft; fields will be split automatically.",
+    "dailyInput": "Daily input",
+    "dailyInputHint": "Capture dreams, journal notes, and session fragments into the timeline.",
+    "inputModes": {
+      "text": { "title": "Text note", "hint": "Write dreams and feelings" },
+      "voice": { "title": "Voice record", "hint": "Speak fragments after waking" },
+      "image": { "title": "Image clue", "hint": "Add sketches, photos, symbols" }
+    },
     "timeline": "Timeline",
     "visibleTimeline": "Four nodes are visible first; scroll sideways for more records.",
     "source": "Source record",
@@ -91,6 +98,18 @@
     "title": "Keep long-term narrative material inside projects",
     "intro": "Each project stores records, symbols, timelines, and generated cards for ongoing client or illustration work.",
     "create": "New project",
+    "createLabel": "Quick create",
+    "createTitle": "Set up a project in three steps",
+    "quick": {
+      "client": "Client / theme",
+      "theme": "Deck direction",
+      "firstRecord": "First record"
+    },
+    "form": {
+      "client": "Client name or anonymous code",
+      "theme": "Deck theme: dreams, relationships, healing…",
+      "rhythm": "Rhythm: daily / weekly / after session"
+    },
     "records": "records",
     "cards": "cards",
     "privacy": "Privacy state",
