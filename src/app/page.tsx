@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PenLine, Plus, Sparkles } from "lucide-react";
+import { Camera, Mic, PenLine, Plus, Sparkles, Type } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { AppChrome } from "@/components/studio/app-chrome";
 import { CommunityShareButton } from "@/components/studio/community-share-button";
