@@ -106,24 +106,50 @@ function WorkspaceContent({ data, locale }: { data: StudioData; locale: LocaleMo
   return (
     <div className="grid gap-3" data-el="workspace-page">
       <section className="rounded-[32px] border border-border/40 bg-card/38 px-5 py-4 shadow-[var(--shadow-sm)] backdrop-blur-xl md:px-6" data-el="workspace-hero">
-        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <div className="max-w-3xl">
+        <div className="grid gap-5 xl:grid-cols-[1fr_360px] xl:items-start">
+          <div className="min-w-0">
             <p className="text-xs font-semibold text-primary">{t("workspace.eyebrow")}</p>
-            <h1 className="mt-1 font-heading text-3xl font-semibold leading-tight text-secondary md:text-5xl">{t("workspace.title")}</h1>
-          </div>
-          <div className="grid shrink-0 gap-2 sm:min-w-[240px]" data-el="workspace-quick-actions">
-            <div className="flex flex-wrap gap-2">
-              <button className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/76 px-4 py-2 text-sm font-semibold text-secondary shadow-[var(--shadow-sm)]" data-el="add-record-button">
-                <Plus className="size-4" /> {t("workspace.addRecord")}
-              </button>
-              <button onClick={() => void handleGenerate()} className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-accent shadow-[var(--shadow-md)]" data-el="generate-card-button">
-                <Sparkles className="size-4" /> {t("workspace.generate")}
-              </button>
+            <h1 className="mt-1 max-w-3xl font-heading text-3xl font-semibold leading-tight text-secondary md:text-5xl">{t("workspace.title")}</h1>
+            <div className="mt-4 rounded-[28px] border border-primary/20 bg-card/68 p-3" data-el="daily-input-panel">
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">{t("workspace.dailyInput")}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">{t("workspace.dailyInputHint")}</p>
+                </div>
+                <button className="hidden rounded-full border border-border/60 bg-card/80 px-3 py-1.5 text-xs font-semibold text-secondary sm:inline-flex" data-el="quick-add-button"><Plus className="mr-1 size-3.5" />{t("workspace.addRecord")}</button>
+              </div>
+              <div className="mt-3 grid gap-2 sm:grid-cols-3">
+                {[
+                  { key: "text", icon: Type },
+                  { key: "voice", icon: Mic },
+                  { key: "image", icon: Camera },
+                ].map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <button key={item.key} type="button" onClick={() => setInputMode(item.key)} className={cn("rounded-2xl border px-3 py-3 text-left transition", inputMode === item.key ? "border-secondary bg-secondary text-accent shadow-[var(--shadow-md)]" : "border-border/60 bg-card/78 text-secondary")} data-el={`input-mode-${item.key}`}>
+                      <Icon className="mb-2 size-4" />
+                      <span className="block text-sm font-semibold">{t(`workspace.inputModes.${item.key}.title`)}</span>
+                      <span className={cn("mt-1 block text-xs leading-5", inputMode === item.key ? "text-accent/75" : "text-muted-foreground")}>{t(`workspace.inputModes.${item.key}.hint`)}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-            <div className="rounded-[24px] border border-primary/25 bg-primary/10 px-4 py-3 text-sm text-secondary" data-el="draft-status-card">
+          </div>
+
+          <div className="grid shrink-0 gap-3" data-el="workspace-quick-actions">
+            <div className="rounded-[28px] border border-primary/25 bg-primary/10 px-4 py-3 text-sm text-secondary" data-el="draft-status-card">
               <span className="block text-[11px] font-semibold uppercase tracking-[0.24em] text-primary">{t("workspace.statusLabel")}</span>
               <span className="mt-1 block font-heading text-xl font-semibold leading-tight">{isGenerated ? t("workspace.generated") : t("workspace.readyStatus")}</span>
               <span className="mt-1 block text-xs leading-5 text-muted-foreground">{t("workspace.statusHint")}</span>
+            </div>
+            <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-1">
+              <button className="inline-flex items-center justify-center gap-2 rounded-full border border-border/60 bg-card/76 px-4 py-3 text-sm font-semibold text-secondary shadow-[var(--shadow-sm)]" data-el="add-record-button">
+                <Plus className="size-4" /> {t("workspace.addRecord")}
+              </button>
+              <button onClick={() => void handleGenerate()} className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary px-4 py-3 text-sm font-semibold text-accent shadow-[var(--shadow-md)]" data-el="generate-card-button">
+                <Sparkles className="size-4" /> {t("workspace.generate")}
+              </button>
             </div>
           </div>
         </div>
