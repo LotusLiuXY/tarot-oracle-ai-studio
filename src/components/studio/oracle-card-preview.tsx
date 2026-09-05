@@ -8,7 +8,7 @@ export function OracleCardPreview({ card, featured = false }: { card: OracleCard
   const { t } = useTranslation();
 
   return (
-    <article className={`relative grid overflow-hidden rounded-[36px] border border-primary/25 bg-[linear-gradient(160deg,rgba(255,248,239,.98),rgba(238,231,244,.88))] p-5 shadow-[var(--shadow-md)] dark:bg-[linear-gradient(160deg,rgba(255,248,239,.95),rgba(167,134,200,.20))] ${featured ? "min-h-[560px] lg:min-h-[640px]" : "min-h-[390px]"}`} data-el="oracle-card-preview">
+    <article className={`relative grid overflow-hidden rounded-[40px] border border-primary/25 bg-[linear-gradient(160deg,rgba(255,248,239,.98),rgba(238,231,244,.88))] p-6 shadow-[var(--shadow-md)] dark:bg-[linear-gradient(160deg,rgba(255,248,239,.95),rgba(167,134,200,.20))] ${featured ? "min-h-[640px] lg:min-h-[760px]" : "min-h-[390px]"}`} data-el="oracle-card-preview">
       <div className="pointer-events-none absolute inset-[-1px] animate-[border-glow_7s_var(--motion-ease)_infinite] rounded-[36px] bg-[var(--satin-sheen)] mix-blend-screen" />
       <div className="pointer-events-none absolute inset-3 rounded-[30px] border border-primary/15" />
       <div className="relative flex items-center justify-between text-xs text-muted-foreground" data-el="card-preview-header">
