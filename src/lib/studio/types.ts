@@ -1,5 +1,9 @@
 export type LocaleMode = "zh-CN" | "en-US";
 
+export function resolveStudioLocale(language?: string): LocaleMode {
+  return language?.toLowerCase().startsWith("zh") ? "zh-CN" : "en-US";
+}
+
 export type TimelineEntry = {
   id: string;
   day: string;
