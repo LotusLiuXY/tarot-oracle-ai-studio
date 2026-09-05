@@ -16,9 +16,9 @@ export function OracleCardPreview({ card, featured = false }: { card: OracleCard
         <span className="font-heading text-5xl text-secondary">{card.number}</span>
       </div>
       <div className="relative my-6 grid flex-1 place-items-center" aria-hidden>
-        <div className={`${featured ? "size-64 rounded-[72px] md:size-80" : "size-44 rounded-[44px]"} grid place-items-center bg-[radial-gradient(circle_at_50%_42%,rgba(255,248,239,.98),rgba(167,134,200,.34)_43%,rgba(61,40,78,.06)_73%),linear-gradient(135deg,rgba(167,134,200,.20),rgba(255,248,239,.86))] shadow-[inset_0_0_34px_rgba(255,255,255,.66),0_22px_48px_rgba(61,40,78,.13)]`}>
-          <div className={`${featured ? "h-40 w-28" : "h-28 w-20"} relative rounded-[50%_50%_46%_46%] border border-secondary/25`}>
-            <Moon className={`${featured ? "left-7 top-7 size-20" : "left-5 top-5 size-12"} absolute text-primary drop-shadow-[0_0_14px_rgba(167,134,200,.75)]`} />
+        <div className={`${featured ? "size-80 rounded-[88px] md:size-[25rem]" : "size-44 rounded-[44px]"} grid place-items-center bg-[radial-gradient(circle_at_50%_42%,rgba(255,248,239,.98),rgba(167,134,200,.34)_43%,rgba(61,40,78,.06)_73%),linear-gradient(135deg,rgba(167,134,200,.20),rgba(255,248,239,.86))] shadow-[inset_0_0_34px_rgba(255,255,255,.66),0_22px_48px_rgba(61,40,78,.13)]`}>
+          <div className={`${featured ? "h-52 w-36" : "h-28 w-20"} relative rounded-[50%_50%_46%_46%] border border-secondary/25`}>
+            <Moon className={`${featured ? "left-9 top-9 size-28" : "left-5 top-5 size-12"} absolute text-primary drop-shadow-[0_0_14px_rgba(167,134,200,.75)]`} />
             <Sparkles className={`${featured ? "-right-3 bottom-4 size-7" : "-right-2 bottom-2 size-5"} absolute text-primary/70`} />
             <span className="absolute bottom-[-34px] left-1/2 h-14 w-px -translate-x-1/2 bg-gradient-to-b from-primary to-transparent" />
           </div>
