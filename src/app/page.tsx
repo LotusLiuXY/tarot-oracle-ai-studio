@@ -96,13 +96,12 @@ function WorkspaceContent({ data, locale }: { data: StudioData; locale: LocaleMo
   const groupSummary = (group: FieldGroupKey) => FIELD_GROUPS[group].slice(0, 3).map((key) => fieldValues[key]).join(" · ");
 
   return (
-    <div className="grid gap-5" data-el="workspace-page">
-      <section className="rounded-[36px] border border-border/50 bg-card/50 p-5 shadow-[var(--shadow-sm)] backdrop-blur-xl md:p-7" data-el="workspace-hero">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold text-primary">{t("workspace.eyebrow")}</p>
-            <h1 className="mt-2 font-heading text-4xl font-semibold leading-tight text-secondary md:text-6xl">{t("workspace.title")}</h1>
-            <p className="mt-3 text-sm leading-6 text-muted-foreground md:text-base">{t("workspace.intro")}</p>
+    <div className="grid gap-3" data-el="workspace-page">
+      <section className="rounded-[32px] border border-border/40 bg-card/38 px-5 py-4 shadow-[var(--shadow-sm)] backdrop-blur-xl md:px-6" data-el="workspace-hero">
+        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold text-primary">{t("workspace.eyebrow")}</p>
+            <h1 className="mt-1 font-heading text-3xl font-semibold leading-tight text-secondary md:text-5xl">{t("workspace.title")}</h1>
           </div>
           <div className="flex shrink-0 flex-wrap gap-2">
             <button className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/70 px-4 py-2 text-sm font-semibold text-secondary" data-el="add-record-button">
@@ -115,10 +114,10 @@ function WorkspaceContent({ data, locale }: { data: StudioData; locale: LocaleMo
         </div>
       </section>
 
-      <section className="grid gap-5 xl:grid-cols-[1.08fr_.92fr]" data-el="workspace-main-grid">
-        <div className="grid min-w-0 gap-5">
+      <section className="grid gap-3 xl:grid-cols-[1.18fr_.82fr]" data-el="workspace-main-grid">
+        <div className="grid min-w-0 gap-3">
           <OracleCardPreview card={card} featured />
-          <div className="rounded-[36px] border border-border/50 bg-card/50 p-4 shadow-[var(--shadow-sm)] backdrop-blur-xl" data-el="timeline-panel">
+          <div className="rounded-[32px] border border-border/45 bg-card/46 p-3 shadow-[var(--shadow-sm)] backdrop-blur-xl" data-el="timeline-panel">
             <div className="mb-3 flex items-center justify-between gap-3">
               <div>
                 <h2 className="font-heading text-2xl font-semibold text-secondary">{t("workspace.timeline")}</h2>
