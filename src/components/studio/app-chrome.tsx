@@ -6,6 +6,7 @@ import { Code2, Folder, GalleryVerticalEnd, MoonStar, Sparkles } from "lucide-re
 import { useTranslation } from "react-i18next";
 import { UserBadge } from "@/components/user-profile/user-badge";
 import { LanguageSwitcher } from "@/components/i18n/language-switcher";
+import { ThemeToggle } from "@/components/studio/theme-toggle";
 import { cn } from "@/utils/utils";
 
 const NAV_ITEMS = [
