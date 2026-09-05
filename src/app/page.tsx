@@ -11,8 +11,7 @@ import { OracleCardPreview } from "@/components/studio/oracle-card-preview";
 import { TimelineStrip } from "@/components/studio/timeline-strip";
 import { useStudioSnapshot } from "@/components/studio/use-studio-snapshot";
 import { generateOracleCard } from "@/lib/api/studio";
-import { buildCardHtml, type LocaleMode, type StudioSnapshot } from "@/lib/studio/types";
-import { resolveStudioLocale } from "@/lib/studio/mock-data";
+import { buildCardHtml, resolveStudioLocale, type LocaleMode, type StudioSnapshot } from "@/lib/studio/types";
 import { cn } from "@/utils/utils";
 
 const FIELD_GROUPS: Record<FieldGroupKey, readonly FieldKey[]> = {
