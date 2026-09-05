@@ -97,6 +97,11 @@ function WorkspaceContent({ data, locale }: { data: StudioData; locale: LocaleMo
   ].join("\n");
 
   const groupSummary = (group: FieldGroupKey) => FIELD_GROUPS[group].slice(0, 3).map((key) => fieldValues[key]).join(" · ");
+  const handleGenerate = async () => {
+    setIsGenerated(true);
+    const generated = await generateOracleCard({ recordIds: [activeEntry], projectId: data.projects[0]?.id, locale });
+    setFieldValues(Object.fromEntries(FIELD_KEYS.map((key) => [key, getFieldValue(generated, key)])) as Record<FieldKey, string>);
+  };
 
   return (
     <div className="grid gap-3" data-el="workspace-page">
