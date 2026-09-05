@@ -9,6 +9,7 @@ import { UserSyncEffect } from "@/components/user-profile/user-sync-effect";
 import { I18nProvider } from "@/components/i18n/i18n-provider";
 import { LocaleSyncEffect } from "@/components/i18n/locale-sync-effect";
 import { PreviewInspector } from "@/components/eazo/preview-inspector";
+import { ThemeProvider } from "@/components/studio/theme-provider";
 import { getServerLocale } from "@/lib/i18n/server-preference";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -81,13 +82,15 @@ export default async function RootLayout({
         data-eazo-preview-inspector-runtime=""
       >
         <I18nProvider>
-          <EazoProvider>
-            <LocaleSyncEffect />
-            <UserSyncEffect />
-            {children}
-            <Toaster />
-            <PreviewInspector />
-          </EazoProvider>
+          <ThemeProvider>
+            <EazoProvider>
+              <LocaleSyncEffect />
+              <UserSyncEffect />
+              {children}
+              <Toaster />
+              <PreviewInspector />
+            </EazoProvider>
+          </ThemeProvider>
         </I18nProvider>
         {EAZO_APP_ID && (
           <Script
