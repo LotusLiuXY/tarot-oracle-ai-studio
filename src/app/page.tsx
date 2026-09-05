@@ -61,6 +61,14 @@ export default function Home() {
     Object.fromEntries(FIELD_KEYS.map((key) => [key, getFieldValue(baseCard, key)])) as Record<FieldKey, string>,
   );
 
+  useEffect(() => {
+    setFieldValues(Object.fromEntries(FIELD_KEYS.map((key) => [key, getFieldValue(baseCard, key)])) as Record<FieldKey, string>);
+    setActiveEntry("tide");
+    setActiveGroup("visual");
+    setActiveField("image");
+    setIsGenerated(false);
+  }, [baseCard, locale]);
+
   const selectedRecord = data.timelineEntries.find((entry) => entry.id === activeEntry) ?? data.timelineEntries[0];
   const card = useMemo(
     () => ({
