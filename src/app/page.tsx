@@ -57,6 +57,7 @@ function WorkspaceContent({ data, locale }: { data: StudioData; locale: LocaleMo
   const [activeEntry, setActiveEntry] = useState("tide");
   const [activeGroup, setActiveGroup] = useState<FieldGroupKey>("visual");
   const [activeField, setActiveField] = useState<FieldKey>("image");
+  const [inputMode, setInputMode] = useState("text");
   const [isGenerated, setIsGenerated] = useState(false);
   const [fieldValues, setFieldValues] = useState(() =>
     Object.fromEntries(FIELD_KEYS.map((key) => [key, getFieldValue(baseCard, key)])) as Record<FieldKey, string>,
