@@ -9,7 +9,10 @@ import { FieldCard, type FieldGroupKey } from "@/components/studio/field-card";
 import { HtmlTemplatePreview } from "@/components/studio/html-template-preview";
 import { OracleCardPreview } from "@/components/studio/oracle-card-preview";
 import { TimelineStrip } from "@/components/studio/timeline-strip";
-import { buildCardHtml, getStudioData, resolveStudioLocale, type LocaleMode } from "@/lib/studio/mock-data";
+import { useStudioSnapshot } from "@/components/studio/use-studio-snapshot";
+import { generateOracleCard } from "@/lib/api/studio";
+import { buildCardHtml, type LocaleMode, type StudioSnapshot } from "@/lib/studio/types";
+import { resolveStudioLocale } from "@/lib/studio/mock-data";
 import { cn } from "@/utils/utils";
 
 const FIELD_GROUPS: Record<FieldGroupKey, readonly FieldKey[]> = {
@@ -24,7 +27,7 @@ const FIELD_KEYS = [
 ] as const;
 
 type FieldKey = (typeof FIELD_KEYS)[number];
-type StudioData = ReturnType<typeof getStudioData>;
+type StudioData = StudioSnapshot;
 
 function getFieldValue(card: StudioData["cardDrafts"][number], key: FieldKey) {
   const values: Record<FieldKey, string> = {
