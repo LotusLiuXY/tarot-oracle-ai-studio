@@ -57,18 +57,13 @@ export function LanguageSwitcher() {
       </label>
       <select
         id="app-locale"
-        value={preference}
+        value={activeLocale}
         onChange={(e) => void handleChange(e.target.value)}
         className="max-w-[116px] cursor-pointer truncate bg-transparent text-xs font-semibold text-secondary outline-none"
-        title={
-          preference === "system"
-            ? t("language.followSystemWithLanguage", { language: resolvedLabel })
-            : resolvedLabel
-        }
+        title={resolvedLabel}
       >
-        <option value="system">{t("language.followSystem")}</option>
-        <option value="en-US">{t("language.enUS")}</option>
         <option value="zh-CN">{t("language.zhCN")}</option>
+        <option value="en-US">{t("language.enUS")}</option>
       </select>
     </div>
   );
