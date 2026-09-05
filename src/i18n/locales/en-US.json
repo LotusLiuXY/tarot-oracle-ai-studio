@@ -47,7 +47,7 @@
     "readyStatus": "Ready to generate",
     "statusLabel": "Current status",
     "statusHint": "Add a record, then generate a draft; fields will be split automatically.",
-    "timeline": "Timeline"}]}      �OUTPUT_PARSING_ERROR NIL   �NSError: Failed to parse tool arguments as JSON: key must be a string at line 1 column 401      �禧ю   �宝=functions.multi_edit Yehovha  �json  �{
+    "timeline": "Timeline",
     "visibleTimeline": "Four nodes are visible first; scroll sideways for more records.",
     "source": "Source record",
     "mood": "Mood",
