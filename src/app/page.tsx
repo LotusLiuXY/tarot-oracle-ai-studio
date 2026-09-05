@@ -120,7 +120,7 @@ function WorkspaceContent({ data, locale }: { data: StudioData; locale: LocaleMo
           <div className="rounded-[32px] border border-border/45 bg-card/46 p-3 shadow-[var(--shadow-sm)] backdrop-blur-xl" data-el="timeline-panel">
             <div className="mb-3 flex items-center justify-between gap-3">
               <div>
-                <h2 className="font-heading text-2xl font-semibold text-secondary">{t("workspace.timeline")}</h2>
+                <h2 className="font-heading text-xl font-semibold text-secondary">{t("workspace.timeline")}</h2>
                 <p className="text-xs text-muted-foreground">{t("workspace.visibleTimeline")}</p>
               </div>
               <span className="rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-secondary">{selectedRecord.mood}</span>
