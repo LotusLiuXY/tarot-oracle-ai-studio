@@ -1,27 +1,31 @@
+import { ChevronRight } from "lucide-react";
+
+export type FieldGroupKey = "basic" | "visual" | "reading" | "source";
+
 type FieldCardProps = {
   label: string;
-  value: string;
-  detail?: string;
+  summary: string;
   active?: boolean;
-  multiline?: boolean;
   onClick?: () => void;
 };
 
-export function FieldCard({ label, value, detail, active, multiline, onClick }: FieldCardProps) {
+export function FieldCard({ label, summary, active, onClick }: FieldCardProps) {
   return (
     <button
       type="button"
       onClick={onClick}
-      data-el="card-field-block"
-      className={`group w-full rounded-3xl border p-4 text-left shadow-[var(--shadow-sm)] transition duration-200 ${
+      data-el="field-group-card"
+      className={`group w-full rounded-[28px] border p-4 text-left shadow-[var(--shadow-sm)] transition duration-200 ${
         active
-          ? "border-primary/50 bg-card/90 text-foreground"
-          : "border-border/70 bg-card/58 text-foreground hover:border-primary/35 hover:bg-card/75"
+          ? "border-primary/55 bg-card/92 text-foreground"
+          : "border-border/55 bg-card/52 text-foreground hover:border-primary/35 hover:bg-card/75"
       }`}
     >
-      <span className="block text-xs font-semibold tracking-[0.18em] text-primary">{label}</span>
-      <span className={`mt-2 block ${multiline ? "text-sm leading-6" : "truncate text-base font-medium"}`}>{value}</span>
-      {detail && <span className="mt-2 block text-xs leading-5 text-muted-foreground">{detail}</span>}
+      <span className="flex items-center justify-between gap-3 text-sm font-semibold text-secondary">
+        {label}
+        <ChevronRight className={`size-4 text-primary transition ${active ? "rotate-90" : ""}`} />
+      </span>
+      <span className="mt-2 line-clamp-2 block text-xs leading-5 text-muted-foreground">{summary}</span>
     </button>
   );
 }
