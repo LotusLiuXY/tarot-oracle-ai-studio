@@ -110,13 +110,20 @@ function WorkspaceContent({ data, locale }: { data: StudioData; locale: LocaleMo
             <p className="text-xs font-semibold text-primary">{t("workspace.eyebrow")}</p>
             <h1 className="mt-1 font-heading text-3xl font-semibold leading-tight text-secondary md:text-5xl">{t("workspace.title")}</h1>
           </div>
-          <div className="flex shrink-0 flex-wrap gap-2">
-            <button className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/70 px-4 py-2 text-sm font-semibold text-secondary" data-el="add-record-button">
-              <Plus className="size-4" /> {t("workspace.addRecord")}
-            </button>
-            <button onClick={() => void handleGenerate()} className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-accent shadow-[var(--shadow-md)]" data-el="generate-card-button">
-              <Sparkles className="size-4" /> {isGenerated ? t("workspace.generated") : t("workspace.generate")}
-            </button>
+          <div className="grid shrink-0 gap-2 sm:min-w-[240px]" data-el="workspace-quick-actions">
+            <div className="flex flex-wrap gap-2">
+              <button className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/76 px-4 py-2 text-sm font-semibold text-secondary shadow-[var(--shadow-sm)]" data-el="add-record-button">
+                <Plus className="size-4" /> {t("workspace.addRecord")}
+              </button>
+              <button onClick={() => void handleGenerate()} className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-accent shadow-[var(--shadow-md)]" data-el="generate-card-button">
+                <Sparkles className="size-4" /> {t("workspace.generate")}
+              </button>
+            </div>
+            <div className="rounded-[24px] border border-primary/25 bg-primary/10 px-4 py-3 text-sm text-secondary" data-el="draft-status-card">
+              <span className="block text-[11px] font-semibold uppercase tracking-[0.24em] text-primary">{t("workspace.statusLabel")}</span>
+              <span className="mt-1 block font-heading text-xl font-semibold leading-tight">{isGenerated ? t("workspace.generated") : t("workspace.readyStatus")}</span>
+              <span className="mt-1 block text-xs leading-5 text-muted-foreground">{t("workspace.statusHint")}</span>
+            </div>
           </div>
         </div>
       </section>
