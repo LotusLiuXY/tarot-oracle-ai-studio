@@ -47,7 +47,7 @@
     "readyStatus": "等待生成草案",
     "statusLabel": "当前状态",
     "statusHint": "添加记录后可生成，生成后牌卡字段会自动拆分。",
-    "timeline": "时间线"},{
+    "timeline": "时间线",
     "visibleTimeline": "首屏显示 4 个节点，可横向滚动查看更多记录。",
     "source": "来源记录",
     "mood": "情绪",
