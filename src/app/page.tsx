@@ -192,13 +192,23 @@ function WorkspaceContent({ data, locale }: { data: StudioData; locale: LocaleMo
 }
 
 export default function Home() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const locale = resolveStudioLocale(i18n.resolvedLanguage || i18n.language);
-  const data = getStudioData(locale);
+  const { snapshot, loading, user, login } = useStudioSnapshot();
 
   return (
     <AppChrome>
-      <WorkspaceContent key={locale} data={data} locale={locale} />
+      {!user && !loading ? (
+        <section className="rounded-[36px] border border-border/50 bg-card/58 p-6 text-center shadow-[var(--shadow-sm)] backdrop-blur-xl" data-el="login-gate">
+          <h1 className="font-heading text-4xl text-secondary">{t("workspace.title")}</h1>
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-muted-foreground">{t("workspace.intro")}</p>
+          <button onClick={() => void login()} className="mt-5 rounded-full bg-secondary px-5 py-2 text-sm font-semibold text-accent">{t("common.signIn")}</button>
+        </section>
+      ) : loading || !snapshot ? (
+        <div className="rounded-[36px] border border-border/50 bg-card/58 p-8 text-center text-muted-foreground shadow-[var(--shadow-sm)]">{t("common.loading")}</div>
+      ) : (
+        <WorkspaceContent key={`${locale}-${snapshot.cardDrafts[0]?.id ?? "new"}`} data={snapshot} locale={locale} />
+      )}
     </AppChrome>
   );
 }
