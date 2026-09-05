@@ -1,6 +1,6 @@
 import { ShieldCheck } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import type { Project } from "@/lib/studio/mock-data";
+import type { Project } from "@/lib/studio/types";
 
 export function ProjectCard({ project }: { project: Project }) {
   const { t } = useTranslation();
