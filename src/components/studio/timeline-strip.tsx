@@ -1,5 +1,5 @@
 import { cn } from "@/utils/utils";
-import type { TimelineEntry } from "@/lib/studio/mock-data";
+import type { TimelineEntry } from "@/lib/studio/types";
 
 export function TimelineStrip({ entries, activeId, onSelect }: { entries: TimelineEntry[]; activeId: string; onSelect?: (id: string) => void }) {
   return (

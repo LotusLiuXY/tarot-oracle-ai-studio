@@ -2,7 +2,7 @@
 
 import { Moon, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import type { OracleCardDraft } from "@/lib/studio/mock-data";
+import type { OracleCardDraft } from "@/lib/studio/types";
 
 export function OracleCardPreview({ card, featured = false }: { card: OracleCardDraft; featured?: boolean }) {
   const { t } = useTranslation();
