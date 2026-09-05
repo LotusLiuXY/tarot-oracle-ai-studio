@@ -22,8 +22,8 @@ export function AppChrome({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-dvh overflow-x-hidden bg-background text-foreground" data-el="app-shell">
-      <div className="pointer-events-none fixed inset-0 -z-20 bg-[image:var(--studio-bg-image)] bg-cover bg-center opacity-90" />
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,248,239,.82),rgba(238,231,244,.50)_45%,rgba(61,40,78,.08)),radial-gradient(circle_at_50%_38%,rgba(255,248,239,.62),transparent_42%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-20 bg-[image:var(--studio-bg-image)] bg-cover bg-center opacity-80 dark:opacity-45" />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,248,239,.86),rgba(238,231,244,.56)_45%,rgba(61,40,78,.06)),radial-gradient(circle_at_50%_38%,rgba(255,248,239,.72),transparent_42%)] dark:bg-[linear-gradient(180deg,rgba(38,24,47,.92),rgba(61,40,78,.78)_45%,rgba(167,134,200,.16)),radial-gradient(circle_at_50%_34%,rgba(167,134,200,.32),transparent_44%)]" />
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden>
         <span className="absolute left-[-36%] top-[8%] h-[14%] w-[170%] rotate-[-18deg] animate-[moon-sheen_8s_var(--motion-ease)_infinite] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,.54),rgba(167,134,200,.18),transparent)] blur-2xl" />
       </div>
@@ -38,13 +38,14 @@ export function AppChrome({ children }: { children: React.ReactNode }) {
               <span className="block truncate font-heading text-xl font-semibold leading-tight text-secondary">
                 {t("app.name")}
               </span>
-              <span className="block truncate text-xs text-muted-foreground">
+              <span className="hidden truncate text-xs text-muted-foreground sm:block">
                 {t("app.tagline")}
               </span>
             </span>
           </Link>
           <div className="flex shrink-0 items-center gap-2" data-el="header-actions">
             <LanguageSwitcher />
+            <ThemeToggle />
             <UserBadge />
           </div>
         </div>
