@@ -24,6 +24,12 @@
     "enUS": "English",
     "zhCN": "中文"
   },
+  "theme": {
+    "day": "白天",
+    "night": "夜晚",
+    "switchToDay": "切换到白天模式",
+    "switchToNight": "切换到夜晚模式"
+  },
   "nav": {
     "label": "主导航",
     "workspace": "工作台",
@@ -37,19 +43,26 @@
     "intro": "选择客户记录，查看情绪与符号如何进入时间线；生成后，每个牌卡字段都能继续编辑并导出 HTML。",
     "addRecord": "添加记录",
     "generate": "生成牌卡草案",
-    "generating": "正在整理意象…",
-    "generated": "草案已拆分为独立字段",
+    "generated": "草案已拆分",
     "timeline": "时间线",
     "visibleTimeline": "首屏显示 4 个节点，可横向滚动查看更多记录。",
     "source": "来源记录",
     "mood": "情绪",
     "symbols": "符号",
     "intensity": "强度",
-    "fieldEditor": "字段化编辑器",
-    "fieldHint": "点击字段查看完整文本；所有内容都可在后续版本保存为个人牌库。",
+    "fieldEditor": "字段编辑",
+    "fieldHint": "为了更简洁，字段被合并成四组：基础、画面、解析、来源。仍可逐项编辑并导出 HTML。",
     "shareTitle": "分享这张生成结果",
     "shareBody": "这张牌已经包含编号、画面、正逆位解析与故事，适合发起社群讨论或请他人提供绘画方向。",
-    "privacy": "提示：真实客户内容请先匿名化并获得授权。"
+    "privacy": "提示：真实客户内容请先匿名化并获得授权。",
+    "selectedField": "当前编辑",
+    "htmlBelow": "HTML 预览在下方，编辑字段会同步更新。"
+  },
+  "fieldGroups": {
+    "basic": "基础",
+    "visual": "画面",
+    "reading": "解析",
+    "source": "来源"
   },
   "fields": {
     "number": "编号",
@@ -87,7 +100,8 @@
     "intro": "从列表中查看已生成的牌卡草案，继续完善绘画说明、正位解析、逆位解析与故事文本。",
     "open": "打开编辑",
     "count": "{{count}} 个字段",
-    "ready": "可导出"
+    "ready": "可导出",
+    "aiDraft": "AI 草案"
   },
   "export": {
     "eyebrow": "HTML 模板导出",
@@ -96,8 +110,10 @@
     "single": "单张牌",
     "batch": "整组牌",
     "copy": "复制 HTML",
+    "copied": "已复制",
     "structure": "模板结构",
-    "structureBody": "article 代表单张牌，section.field 代表每个可编辑字段。"
+    "structureBody": "article 代表单张牌，section.field 代表每个可编辑字段。",
+    "templateLabel": "HTML 模板"
   },
   "share": {
     "openComposer": "分享到社区",

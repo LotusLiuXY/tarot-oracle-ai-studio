@@ -24,6 +24,12 @@
     "enUS": "English",
     "zhCN": "中文"
   },
+  "theme": {
+    "day": "Day",
+    "night": "Night",
+    "switchToDay": "Switch to day mode",
+    "switchToNight": "Switch to night mode"
+  },
   "nav": {
     "label": "Main navigation",
     "workspace": "Studio",
@@ -37,19 +43,26 @@
     "intro": "Select client records, watch emotion and symbols enter the timeline, then generate independent card fields ready for HTML export.",
     "addRecord": "Add record",
     "generate": "Generate card draft",
-    "generating": "Reading symbols…",
-    "generated": "Draft split into editable fields",
+    "generated": "Draft split",
     "timeline": "Timeline",
     "visibleTimeline": "Four nodes are visible first; scroll sideways for more records.",
     "source": "Source record",
     "mood": "Mood",
     "symbols": "Symbols",
     "intensity": "Intensity",
-    "fieldEditor": "Structured editor",
-    "fieldHint": "Tap a field to read it fully; every block can later be saved into your deck library.",
+    "fieldEditor": "Field editor",
+    "fieldHint": "For a calmer view, fields are grouped into four areas: basics, imagery, reading, and source. Each item still edits and exports independently.",
     "shareTitle": "Share this generated card",
     "shareBody": "This card already includes number, imagery, upright and reversed readings, and a story for community feedback.",
-    "privacy": "Tip: anonymize real client content and confirm permission before sharing."
+    "privacy": "Tip: anonymize real client content and confirm permission before sharing.",
+    "selectedField": "Editing now",
+    "htmlBelow": "The HTML preview below updates as you edit."
+  },
+  "fieldGroups": {
+    "basic": "Basics",
+    "visual": "Imagery",
+    "reading": "Reading",
+    "source": "Source"
   },
   "fields": {
     "number": "Number",
@@ -87,7 +100,8 @@
     "intro": "Review generated drafts and refine imagery, upright meaning, reversed meaning, and story text.",
     "open": "Open editor",
     "count": "{{count}} fields",
-    "ready": "Ready to export"
+    "ready": "Ready to export",
+    "aiDraft": "AI draft"
   },
   "export": {
     "eyebrow": "HTML template export",
@@ -96,8 +110,10 @@
     "single": "Single card",
     "batch": "Deck set",
     "copy": "Copy HTML",
+    "copied": "Copied",
     "structure": "Template structure",
-    "structureBody": "article represents one card; section.field represents each editable field."
+    "structureBody": "article represents one card; section.field represents each editable field.",
+    "templateLabel": "HTML Template"
   },
   "share": {
     "openComposer": "Share to community",
