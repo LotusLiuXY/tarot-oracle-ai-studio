@@ -41,10 +41,6 @@ export function LanguageSwitcher() {
     supportedLocales.find((l) => l.code === activeLocale)?.nativeLabel ?? activeLocale;
 
   async function handleChange(value: string) {
-    if (value === "system") {
-      await changeLocale("system");
-      return;
-    }
     const locale = normalizeLocale(value);
     if (locale) await changeLocale(locale as LocaleCode);
   }
