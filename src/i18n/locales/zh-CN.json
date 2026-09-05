@@ -1,4 +1,8 @@
 {
+  "app": {
+    "name": "月光档案",
+    "tagline": "记录成牌，字段成稿"
+  },
   "common": {
     "signIn": "登录",
     "signOut": "退出登录",
@@ -20,6 +24,85 @@
     "enUS": "English",
     "zhCN": "中文"
   },
+  "nav": {
+    "label": "主导航",
+    "workspace": "工作台",
+    "projects": "项目",
+    "cards": "牌卡",
+    "export": "导出"
+  },
+  "workspace": {
+    "eyebrow": "Luna · 梦境牌组",
+    "title": "把时间切片整理成一张可绘画的神谕牌",
+    "intro": "选择客户记录，查看情绪与符号如何进入时间线；生成后，每个牌卡字段都能继续编辑并导出 HTML。",
+    "addRecord": "添加记录",
+    "generate": "生成牌卡草案",
+    "generating": "正在整理意象…",
+    "generated": "草案已拆分为独立字段",
+    "timeline": "时间线",
+    "visibleTimeline": "首屏显示 4 个节点，可横向滚动查看更多记录。",
+    "source": "来源记录",
+    "mood": "情绪",
+    "symbols": "符号",
+    "intensity": "强度",
+    "fieldEditor": "字段化编辑器",
+    "fieldHint": "点击字段查看完整文本；所有内容都可在后续版本保存为个人牌库。",
+    "shareTitle": "分享这张生成结果",
+    "shareBody": "这张牌已经包含编号、画面、正逆位解析与故事，适合发起社群讨论或请他人提供绘画方向。",
+    "privacy": "提示：真实客户内容请先匿名化并获得授权。"
+  },
+  "fields": {
+    "number": "编号",
+    "name": "牌名",
+    "deck": "牌组",
+    "type": "类型",
+    "element": "元素",
+    "keywords": "关键词",
+    "image": "图像描述",
+    "composition": "画面构图",
+    "symbols": "象征物",
+    "palette": "色彩建议",
+    "prompt": "绘画提示词",
+    "avoid": "避免方向",
+    "upright": "正位解析",
+    "reversed": "逆位解析",
+    "story": "解析故事",
+    "sourceSummary": "来源摘要",
+    "action": "行动建议"
+  },
+  "projects": {
+    "eyebrow": "客户与创作项目",
+    "title": "用项目保存长期叙事材料",
+    "intro": "每个项目都可以沉淀记录、符号、时间线与生成过的牌卡，适合咨询师或插画师长期追踪。",
+    "create": "新建项目",
+    "records": "记录",
+    "cards": "牌卡",
+    "privacy": "隐私状态",
+    "focus": "本周重点",
+    "focusBody": "优先整理 Luna 的梦境记录，生成 3 张围绕“门、潮水、灯”的阶段牌。"
+  },
+  "cards": {
+    "eyebrow": "牌卡草案库",
+    "title": "每张牌都是可编辑的数据结构",
+    "intro": "从列表中查看已生成的牌卡草案，继续完善绘画说明、正位解析、逆位解析与故事文本。",
+    "open": "打开编辑",
+    "count": "{{count}} 个字段",
+    "ready": "可导出"
+  },
+  "export": {
+    "eyebrow": "HTML 模板导出",
+    "title": "把牌卡拆成语义清晰的 HTML 区块",
+    "intro": "导出内容保留牌名、编号、图像描述、解析与绘画提示词，便于复制到交付文档或继续排版。",
+    "single": "单张牌",
+    "batch": "整组牌",
+    "copy": "复制 HTML",
+    "structure": "模板结构",
+    "structureBody": "article 代表单张牌，section.field 代表每个可编辑字段。"
+  },
+  "share": {
+    "openComposer": "分享到社区",
+    "retry": "暂时无法打开分享面板，请稍后再试。"
+  },
   "errors": {
     "notFound": {
       "code": "404",
@@ -32,38 +115,6 @@
       "description": "发生了意外错误。你可以重试，或返回首页继续。",
       "tryAgain": "重试",
       "backHome": "返回首页"
-    }
-  },
-  "starter": {
-    "badge": "Eazo 应用模板",
-    "title": "用 Eazo 构建你的下一个应用",
-    "subtitle": "你现在拥有干净的基础：认证、数据访问与平台能力已就绪，可直接开发产品功能。",
-    "steps": {
-      "readDocs": {
-        "title": "阅读文档",
-        "desc": "打开 AGENTS.md 与 README.md，了解模板架构与约定。",
-        "code": "AGENTS.md + README.md"
-      },
-      "replacePage": {
-        "title": "替换本页",
-        "desc": "将产品 UI 放到 src/components 下，并保持 page.tsx 为薄入口。",
-        "code": "src/app/page.tsx"
-      },
-      "firstFeature": {
-        "title": "开发第一个功能",
-        "desc": "在 src/app/api 添加接口，并通过 src/lib/api 中的类型化 helper 调用。",
-        "code": "src/app/api/*"
-      },
-      "translations": {
-        "title": "补充翻译",
-        "desc": "在 src/i18n/locales 编辑中英文文案；layout 已接入 LanguageSwitcher 与 I18nProvider。",
-        "code": "src/i18n/locales/"
-      }
-    },
-    "nextCommand": {
-      "title": "下一步命令",
-      "desc": "启动开发服务器，实时迭代你的产品。",
-      "command": "bun dev"
     }
   }
 }

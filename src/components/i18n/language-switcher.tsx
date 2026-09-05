@@ -1,7 +1,5 @@
 "use client";
 
-/** Reference locale control — restyle or fork for your app's header/settings UI. Keep changeLocale() wiring. */
-
 import { useCallback, useSyncExternalStore } from "react";
 import { Languages } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -52,8 +50,8 @@ export function LanguageSwitcher() {
   }
 
   return (
-    <div className="flex items-center gap-1.5 rounded-full border border-border bg-background px-2 py-1 shadow-sm">
-      <Languages className="h-3.5 w-3.5 text-muted-foreground" aria-hidden />
+    <div className="flex items-center gap-1.5 rounded-full border border-border/70 bg-card/65 px-2.5 py-1.5 text-secondary shadow-[var(--shadow-sm)] backdrop-blur-xl" data-el="language-switcher">
+      <Languages className="h-3.5 w-3.5 text-primary" aria-hidden />
       <label htmlFor="app-locale" className="sr-only">
         {t("language.label")}
       </label>
@@ -61,7 +59,7 @@ export function LanguageSwitcher() {
         id="app-locale"
         value={preference}
         onChange={(e) => void handleChange(e.target.value)}
-        className="max-w-[140px] cursor-pointer truncate bg-transparent text-xs font-medium text-foreground outline-none"
+        className="max-w-[116px] cursor-pointer truncate bg-transparent text-xs font-semibold text-secondary outline-none"
         title={
           preference === "system"
             ? t("language.followSystemWithLanguage", { language: resolvedLabel })

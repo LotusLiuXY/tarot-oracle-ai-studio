@@ -1,4 +1,8 @@
 {
+  "app": {
+    "name": "Moonlit Archive",
+    "tagline": "Turn records into editable cards"
+  },
   "common": {
     "signIn": "Sign in",
     "signOut": "Sign out",
@@ -20,6 +24,85 @@
     "enUS": "English",
     "zhCN": "中文"
   },
+  "nav": {
+    "label": "Main navigation",
+    "workspace": "Studio",
+    "projects": "Projects",
+    "cards": "Cards",
+    "export": "Export"
+  },
+  "workspace": {
+    "eyebrow": "Luna · Dream deck",
+    "title": "Shape time fragments into a drawable oracle card",
+    "intro": "Select client records, watch emotion and symbols enter the timeline, then generate independent card fields ready for HTML export.",
+    "addRecord": "Add record",
+    "generate": "Generate card draft",
+    "generating": "Reading symbols…",
+    "generated": "Draft split into editable fields",
+    "timeline": "Timeline",
+    "visibleTimeline": "Four nodes are visible first; scroll sideways for more records.",
+    "source": "Source record",
+    "mood": "Mood",
+    "symbols": "Symbols",
+    "intensity": "Intensity",
+    "fieldEditor": "Structured editor",
+    "fieldHint": "Tap a field to read it fully; every block can later be saved into your deck library.",
+    "shareTitle": "Share this generated card",
+    "shareBody": "This card already includes number, imagery, upright and reversed readings, and a story for community feedback.",
+    "privacy": "Tip: anonymize real client content and confirm permission before sharing."
+  },
+  "fields": {
+    "number": "Number",
+    "name": "Card name",
+    "deck": "Deck",
+    "type": "Type",
+    "element": "Element",
+    "keywords": "Keywords",
+    "image": "Image description",
+    "composition": "Composition",
+    "symbols": "Symbols",
+    "palette": "Palette",
+    "prompt": "Drawing prompt",
+    "avoid": "Avoid",
+    "upright": "Upright reading",
+    "reversed": "Reversed reading",
+    "story": "Reading story",
+    "sourceSummary": "Source summary",
+    "action": "Action prompt"
+  },
+  "projects": {
+    "eyebrow": "Clients and creative projects",
+    "title": "Keep long-term narrative material inside projects",
+    "intro": "Each project stores records, symbols, timelines, and generated cards for ongoing client or illustration work.",
+    "create": "New project",
+    "records": "records",
+    "cards": "cards",
+    "privacy": "Privacy state",
+    "focus": "This week's focus",
+    "focusBody": "Organize Luna's dream records and create three phase cards around doors, tides, and lamps."
+  },
+  "cards": {
+    "eyebrow": "Card draft library",
+    "title": "Every card is an editable data structure",
+    "intro": "Review generated drafts and refine imagery, upright meaning, reversed meaning, and story text.",
+    "open": "Open editor",
+    "count": "{{count}} fields",
+    "ready": "Ready to export"
+  },
+  "export": {
+    "eyebrow": "HTML template export",
+    "title": "Split each card into semantic HTML sections",
+    "intro": "Export the card name, number, image description, meanings, and drawing prompt for delivery or layout work.",
+    "single": "Single card",
+    "batch": "Deck set",
+    "copy": "Copy HTML",
+    "structure": "Template structure",
+    "structureBody": "article represents one card; section.field represents each editable field."
+  },
+  "share": {
+    "openComposer": "Share to community",
+    "retry": "Could not open sharing. Please try again later."
+  },
   "errors": {
     "notFound": {
       "code": "404",
@@ -32,38 +115,6 @@
       "description": "An unexpected error occurred. You can try again or return to the home page.",
       "tryAgain": "Try again",
       "backHome": "Back to home"
-    }
-  },
-  "starter": {
-    "badge": "Eazo App Starter",
-    "title": "Build your next app with Eazo",
-    "subtitle": "You now have a clean foundation with auth, data access, and platform integrations ready for your product.",
-    "steps": {
-      "readDocs": {
-        "title": "Read the docs",
-        "desc": "Open AGENTS.md and README.md to understand the template architecture.",
-        "code": "AGENTS.md + README.md"
-      },
-      "replacePage": {
-        "title": "Replace this page",
-        "desc": "Move your product UI into src/components and keep page.tsx thin.",
-        "code": "src/app/page.tsx"
-      },
-      "firstFeature": {
-        "title": "Build your first feature",
-        "desc": "Add API routes under src/app/api and call them from typed helpers.",
-        "code": "src/app/api/*"
-      },
-      "translations": {
-        "title": "Add translations",
-        "desc": "Edit en-US / zh-CN strings in src/i18n/locales. LanguageSwitcher and I18nProvider in layout.tsx are already wired.",
-        "code": "src/i18n/locales/"
-      }
-    },
-    "nextCommand": {
-      "title": "Next command",
-      "desc": "Start developing and iterate in real time.",
-      "command": "bun dev"
     }
   }
 }
