@@ -4,9 +4,9 @@ import { useEffect, useMemo, useState } from "react";
 import { EazoCoverReady } from "@/components/eazo-cover/eazo-cover-ready";
 
 export const COVER_PREVIEW_DATA = [
-  { day: "18", title: "门后潮汐", mood: "柔软", card: "门后的潮汐" },
-  { day: "21", title: "旧屋灯光", mood: "牵挂", card: "旧屋的灯" },
-  { day: "25", title: "白兔时钟", mood: "急促", card: "迟到白兔" },
+  { day: "18", title: "Door tide", mood: "Tender", card: "Tide Behind Door" },
+  { day: "21", title: "Old lamp", mood: "Care", card: "Lamp in Old House" },
+  { day: "25", title: "White rabbit", mood: "Urgent", card: "Late White Rabbit" },
 ];
 
 export function CoverPreview() {
@@ -31,8 +31,8 @@ export function CoverPreview() {
         <div className="relative w-full max-w-[350px] rounded-[34px] border border-[rgba(61,40,78,.18)] bg-[rgba(255,248,239,.68)] p-4 shadow-[0_22px_70px_rgba(61,40,78,.18)] backdrop-blur-xl">
           <div className="mb-3 flex items-center justify-between">
             <div>
-              <p className="text-xs text-[#7B6888]">月光档案</p>
-              <h1 className="font-serif text-3xl text-[#3D284E]">记录成牌</h1>
+              <p className="text-xs text-[#7B6888]">Moonlit Archive</p>
+              <h1 className="font-serif text-3xl text-[#3D284E]">Records to cards</h1>
             </div>
             <span className="rounded-full bg-[#3D284E] px-3 py-1 text-xs text-[#FFF8EF]">AI</span>
           </div>
