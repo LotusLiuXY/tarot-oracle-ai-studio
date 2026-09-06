@@ -1,7 +1,7 @@
 import type { OracleCardDraft, Project, StudioSnapshot, TimelineEntry } from "./types";
 
 export const DEFAULT_SNAPSHOT: StudioSnapshot = {
-  appName: "月光档案",
+  appName: "Luna Record 月光档案",
   communityAngle: "邀请其他创作者一起讨论这张牌的画面符号与解析方向。",
   weeklyFocusTitle: "Luna · 9月梦境阶段",
   weeklySymbols: ["门", "潮水", "灯", "月光", "旧屋"],

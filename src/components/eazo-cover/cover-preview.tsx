@@ -31,7 +31,7 @@ export function CoverPreview() {
         <div className="relative w-full max-w-[350px] rounded-[34px] border border-[rgba(61,40,78,.18)] bg-[rgba(255,248,239,.68)] p-4 shadow-[0_22px_70px_rgba(61,40,78,.18)] backdrop-blur-xl">
           <div className="mb-3 flex items-center justify-between">
             <div>
-              <p className="text-xs text-[#7B6888]">Moonlit Archive</p>
+              <p className="text-xs text-[#7B6888]">Luna Record</p>
               <h1 className="font-serif text-3xl text-[#3D284E]">Records to cards</h1>
             </div>
             <span className="rounded-full bg-[#3D284E] px-3 py-1 text-xs text-[#FFF8EF]">AI</span>
