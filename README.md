@@ -1,4 +1,4 @@
-# Luna · 塔罗神谕 AI 创作工作台 (Tarot Oracle AI Studio)
+# Luna Record · 月光档案
 
 > 把梦境、日记、咨询片段整理成一张可绘画的神谕牌 —— 记录成牌，字段成稿。
 
