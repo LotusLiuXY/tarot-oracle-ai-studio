@@ -1,3 +1,11 @@
+# Luna · 塔罗神谕 AI 创作工作台 (Tarot Oracle AI Studio)
+
+🔗 **在线访问 / Live App:** https://tarot-oracle-ai-studio-9c96c1ee.eazo.dev
+
+把梦境、日记、咨询片段整理成可编辑的神谕牌卡草案，支持文字/语音/图片录入、时间线追踪、字段拆分与 HTML 导出。
+
+---
+
 A minimal Next.js starter for building apps inside the [Eazo](https://eazo.ai) platform. Includes a working example of the Eazo session token flow: the app requests the encrypted user token from the host via `postMessage`, sends it to a Next.js API route, decrypts it server-side with `@eazo/node-sdk`, and returns the user profile.
 
 ## Getting Started
